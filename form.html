@@ -10,21 +10,63 @@
 
 <body>
 
-    <form action="" method="get">
+    <!-- <form action="" method="get" enctype="text/plain" autocomplete="off"></form> -->
+    <!-- <form action="" method="get" enctype="multipart/form-data" autocomplete="off"></form> -->
+    <!-- <form action="" method="get" enctype="application/x-www-form-urlencoded" autocomplete="off"></form> -->
+    <form action="" method="post" autocomplete="off">
+        <fieldset>
+            <legend>Radyo Düğmeleri</legend>
+
+            <input type="radio" name="cinsiyet" value="Kadın" checked>
+            <label>Kadın</label>
+
+            <input type="radio" name="cinsiyet" value="Erkek">
+            <label>Erkek</label>
+
+            <input type="radio" name="cinsiyet" value="Belirtmek istemiyorum">
+            <label>Belirtmek istemiyorum</label>
+        </fieldset>
+        <fieldset>
+            <legend>Checkbox</legend>
+            <input type="checkbox" name="haber" value="spor">
+            <label>Spor</label>
+
+            <input type="checkbox" name="haber" value="magazin">
+            <label>Magazin</label>
+        </fieldset>
+        <fieldset>
+            <legend>Kişisel Bilgiler</legend>
+            <input type="text" placeholder="Adınız">
+        </fieldset>
+        <!-- <p>
+        <form action="" method="get">
+            <input type="text" name="fotograf" placeholder="fotoğraf">
+            <input type="submit" value="gönder">
+        </form>
+        </p> -->
+
         <!-- <label for="telefon">Telefon:</label> -->
         <!-- <input type="text" name="telefon" value="5452553696"><br> -->
         <!-- <input type="text" name="telefon" value="" placeholder="Telefon numaranız" required><br> -->
-        <input type="email" name="eposta" value="" placeholder="E-posta adresiniz" required><br>
+        <input type="email" name="eposta" value="kcalik@gmail.com" placeholder="E-posta adresiniz" disabled><br>
 
         <!-- <label for="adi">Adınız:</label> -->
         <!-- <input type="text" name="adi" value="kerim" ><br> -->
-        <input type="text" name="adi" value="" placeholder="Adınız" required><br>
+        <input type="text" name="adi" value="Kerim Çalık" placeholder="Adınız" readonly><br>
 
-        <input type="password" name="sifre" placeholder="Şifreniz"><br>
+        <input type="password" name="sifre" placeholder="Şifreniz" maxlength="8" minlength="4"><br>
 
         <input type="number" name="yasin" placeholder="Yaşınız" step="5" min="1" max="100"><br>
 
-        <input type="submit" value="Kaydet">
+        <input type="date" name="tarih" max="2021-11-30" min="2021-11-01"><br>
+        <input type="datetime-local" name="tarihzaman"><br>
+        <input type="file" name="dosya"><br>
+
+        <textarea name="mesaj" rows="20" cols="100" maxlength="280"></textarea><br>
+
+        <input type="submit" value="Kaydet" onclick="alert(1)">&nbsp;
+        <input type="button" value="Tetikleme bekleyen buton">&nbsp;
+        <input type="reset" value="Temizle">
     </form>
     <!-- Form tagi dışından veri alınamaz veya forma ait veri oluşturulamaz -->
     <br>
