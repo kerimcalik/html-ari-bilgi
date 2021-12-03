@@ -6,13 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        table.main {
+            width: 100%;
+            /* border: 1px solid black; */
+        }
+
+        td.logo {
+            width: 50%;
+            font-size: 36px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 700;
+            color: rgb(16, 16, 32);
+        }
+
+        td.navigation {
+            width: 50%;
+            text-align: right;
+        }
+
+        td.navigation>span {
+            padding-right: 40px;
+        }
+
+        td.navigation>span:last-child {
+            padding-right: 0;
+        }
+    </style>
 </head>
 <!-- Kaynak: https://www.free-css.com/assets/files/free-css-templates/preview/page263/above/-->
 
 <body style="margin-left:10%; margin-right:10%">
 
-    <table style="width: 100%;">
-
+    <table class="main">
+        <tr>
+            <td class="logo">
+                KERİM ÇALIK
+            </td>
+            <td class="navigation">
+                <span><a href="">HOME</a></span>
+                <span><a href="">ABOUT</a></span>
+                <span><a href="">WORK</a></span>
+            </td>
+            <!-- <td class="navigation"><a href="">HOME</a></td>
+            <td class="navigation"><a href="">ABOUT</a></td>
+            <td class="navigation"><a href="">WORK</a></td> -->
+        </tr>
     </table>
 </body>
 
