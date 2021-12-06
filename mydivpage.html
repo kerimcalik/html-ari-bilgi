@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         .container {
             padding-right: 15px;
             padding-left: 15px;
@@ -29,24 +34,57 @@
             width: 100%;
         }
 
+        .img {
+            width: 100%;
+            border: 0;
+            max-width: 100%;
+            vertical-align: middle;
+            height: auto;
+            display: block;
+        }
+
+        .column-50 {
+            width: 50%;
+        }
+
+        .column-30 {
+            width: 30%;
+        }
+
+        .column-70 {
+            width: 70%;
+        }
+
         /*masaüstü bilgisayar veya laptop*/
-        @media(min-width:1200px) {
+        @media (min-width:1200px) {
             .container {
                 width: 1170px;
+            }
+
+            .column {
+                background-color: red;
             }
         }
 
         /*tablet*/
-        @media(min-width: 992px) {
+        @media (min-width: 992px) {
             .container {
                 width: 970px;
+            }
+
+            .column {
+                background-color: blue;
             }
         }
 
         /*akıllı telefon*/
-        @media(min-width:768px) {
+        @media (min-width: 768px) {
             .container {
                 width: 750px;
+            }
+
+            .column {
+                background-color: green;
             }
         }
     </style>
@@ -55,10 +93,19 @@
 <body>
     <div class="container">
         <div class="row">
+            <div class="column column-30">
+                LOGO
+            </div>
+            <div class="column column-70">
+                MENU
+            </div>
+        </div>
+        <div class="row">
             <div class="column">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus molestiae, veritatis praesentium
-                    ut earum fugiat impedit cumque nisi eaque distinctio eveniet quidem vel delectus! Natus aspernatur
-                    porro saepe pariatur fugit.</p>
+                <img src="img/banner.jpg" class="img">
+                <div>
+                    <h1>Başlık</h1>
+                </div>
             </div>
         </div>
     </div>
