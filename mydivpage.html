@@ -55,36 +55,89 @@
             width: 70%;
         }
 
-        /*masaüstü bilgisayar veya laptop*/
-        @media (min-width:1200px) {
+        @media (min-width: 360px) {
             .container {
-                width: 1170px;
+                max-width: 336px;
             }
 
-            .column {
-                background-color: red;
+            .column-70 span {
+                font-size: 28px;
+            }
+
+            .img {
+                display: none;
             }
         }
 
-        /*tablet*/
+        /* Akıllı telefon-1 */
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+
+            .column {
+                background-color: gold;
+            }
+
+            .column-70 span {
+                font-size: 28px;
+            }
+        }
+
+        /* Akıllı telefon-2 */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 750px;
+            }
+
+            .column {
+                background-color: green;
+            }
+
+            .column-70 span {
+                font-size: 24px;
+            }
+
+            .img {
+                display: block;
+            }
+        }
+
+        /* Tablet */
         @media (min-width: 992px) {
             .container {
-                width: 970px;
+                max-width: 970px;
             }
 
             .column {
                 background-color: blue;
             }
+
+            .column-70 span {
+                font-size: 22px;
+            }
+
+            .img {
+                display: block;
+            }
         }
 
-        /*akıllı telefon*/
-        @media (min-width: 768px) {
+        /* Masaüstü bilgisayar veya laptop */
+        @media (min-width:1200px) {
             .container {
-                width: 750px;
+                max-width: 1170px;
             }
 
             .column {
-                background-color: green;
+                background-color: red;
+            }
+
+            .column-70 span {
+                font-size: 20px;
+            }
+
+            .img {
+                display: block;
             }
         }
     </style>
@@ -94,10 +147,10 @@
     <div class="container">
         <div class="row">
             <div class="column column-30">
-                LOGO
+                <h1>LOGO</h1>
             </div>
             <div class="column column-70">
-                MENU
+                <span>MENU</span>
             </div>
         </div>
         <div class="row">
@@ -109,6 +162,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
