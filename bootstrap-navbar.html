@@ -14,21 +14,23 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a href="" class="navbar-brand">
-                Logo
+                <!-- <img src="" width="180" height="70"> -->
+                Kerim Çalık
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="siteMenu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteMenu"
+                aria-controls="siteMenu" aria-expanded="false" aria-label="Toogle Navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="siteMenu">
-                <ul class="navbar-nav mb-2 mg-lg-0">
+                <ul class="navbar-nav mb-2 mg-lg-0 me-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Anasayfa</a>
+                        <a href="#" class="nav-link active" aria-current="page">Anasayfa</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Hakkımda</a>
                     </li>
                     <li class="nav-item dropdown-toggle">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="#dropdown" aria-expanded="false"
                             role="button">Projelerim</a>
                         <ul class="dropdown-menu">
                             <li><a href="" class="dropdown-item">Web Projeleri</a></li>
@@ -48,7 +50,7 @@
             </div>
         </div>
     </nav>
-
+    <script src="js/bootstrap.js"></script>
 </body>
 
 </html>
