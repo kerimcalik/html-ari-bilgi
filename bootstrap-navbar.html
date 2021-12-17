@@ -7,9 +7,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .navbar-light .navbar-nav .show>.nav-link,
+        .navbar-light .navbar-nav .nav-link.active {
+            color: #fff;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: cornflowerblue;
+        }
+    </style>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary" style="background-color: red !important;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAAoCAMAAADzP5WaAAAAllBMVEX///8AAAAgHB0jHyAWERLGxsZ4d3j8/Pzn5+cOCQsOBgjyZSAZFBUnIyT09PRdW1tAPj7xWgAuKyvyYBOcnJyysbHxUwDf39+TkZL+8u64t7fNzc1JR0htbGz+9/X6yrv84tr0hFr3p43zbzX1lnT1kW34uKPzdUH96+X0fExUU1Opqak0MjKFhIT4sZn2nH7718v5wa/NDBDrAAAEW0lEQVRYhcWW23qqOhCAkxBOSeRQjgIWrNVSAVvf/+X2JBDQte3nutCuuVBMhvkzx4jQ78lrU5++fpGHXtff568tT8MoCl9/hwguvn/wEIhcSdg8G9me37Y80sQojML9LuJh/Vzq+jOdXAQi332cm6/Xb/TOo9NzseFE5Lxua/6OTnv0lr63Id8/lbtXxHW9C9eHj8N6h9Kwfot2rxH/eCbWBiwQ+bneNylP2y0Ko1MdhTac5pkFLcP8uU55lO5bxW230b4Nw+9PHrZP5EI8+Yed8vDA2/PnuU3rr2i3hxjwJxf0Tnbq97aGQjo354jL2pafYcqfyt2HTZMemkM0VjUAw3S3P9XNk8fVKdxuZyL//Dp830hrGcflA1h2UB31cw3jCUbVbvt2btZ/KuZVoHgdxvEDuB4WRD83u/dT3f4QVIthU3EZewyXrP5K0aL/lpv8C67TJZYQmyRJOpnsruts1G18yxx1Sqvqg00xWY5jE1aCPrCWQrSTTdBXsGBLbhbH3bxVTAXrxX7fV0N5yTUxpoYhMMgARuDL6bEQFB8dhJwKUyF/rNQ7DsZ5Pq1stG0XtOWCr/z1MMOePhE8gxE0YDaqVM6fXKq5LllVlMk12MvAJDaqF0wJThTXIK6Lg4Ayg409k2Mi8ApUXNoTGWeLzknrsPDBZM8Iw30lpKY5c72ytAQdSpBMcg2D4DjLLHAIHGBVJnkbbOBScQ08SHdiWJDBL+DblyregIkhuSUmLxM3IJJTwaE7+U4ZMIIztNRV7s5HlNxx0XTQhlIdTXCrV1y9MlABDtuUsEEHHCuupI2JzNQJOkzcbFLxKQl+5M4scJfYukQqGSPg4smGfIROwMqQPoridpha029pFrwt5hI0VARuc7EuuwK7S3uZmA4SxvQCcD3ki8Uo7CquDem0x2/QKFWgtHRMnukHri7HnAkr1jK4UCPOhXsv0irE1FmskrF/B6qKsFB+J4wOiwaEvvqBS2bu4I5lroQJt/o/Fz7sxWolVqNxmXp0FDIn17NwNHCHmzNS+Rcy3PNXTPMKasHRugW+9lfc99e8emU57gUX8ptcBnHkQmHkEC2V+uxqeMYMdu5xYe5denOLmyzNiqDtNIISKutYPfdkOZpHVY9pbszkXJHrV1xZWMGUviTPkxtc6F9Xt1089a9yhMLYyifn5w6xK6Eyr7klbMWOU1TJNRethFhJjWwDkza7wZVWmfrzACqCaC70mzB0rDYQtlw+F4YYjWsueqEGk0Vb/MH1DPgJr8kxXd6Ks/SSTCrMPwqdSl8YQscB+TCxYB+06Di5Zq5XYUZhr1T30cJF3kZdJS5WY1reR/MQEJOi+aIuKAbzPMDutFkuwQXpXK3iTRGYuKCYD7kpc2ma5kVHQvxyv/L1zel1yTyeiqSbFM0BVPJMLukKyq6mFLIL63j0Yz2mzSS5rteHCUSyu6/1cIEbBdv31R4uMZuupF8WQvV1+auSbazhns5/OP9V6xZNkhEAAAAASUVORK5CYII=">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hakkımda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Projelerim
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Web Projeleri</a></li>
+                            <li><a class="dropdown-item" href="#">Mobil Projeler</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Diğer</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">İletişim</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-danger" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -50,6 +142,27 @@
             </div>
         </div>
     </nav>
+    <div class="container-fluid">
+        <div id="mert" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/pic-1.jpg" class="w-100 d-block" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banner.jpg" class="w-100 d-block" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/resim-1.jpg" class="w-100 d-block" alt="">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mert" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mert" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
     <script src="js/bootstrap.js"></script>
 </body>
 
